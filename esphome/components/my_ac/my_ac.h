@@ -24,9 +24,7 @@ class MyAC : public esphome::climate::Climate, public esphome::Component {
   void control(const esphome::climate::ClimateCall &call) override {
     if (call.get_mode().has_value()) {
       esphome::climate::ClimateMode mode = *call.get_mode();
-      void control(const climate::ClimateCall &call) override {
-        if (call.get_mode().has_value()) {
-          ClimateMode mode = *call.get_mode();
+     
           if (mode == climate::CLIMATE_MODE_OFF) {
             auto call = remote_transmitter.transmit_raw();
             call.set_id("ir_transmitter");
