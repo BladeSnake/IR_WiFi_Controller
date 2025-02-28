@@ -1,0 +1,6 @@
+{
+  "my_ac": {
+    "files": ["my_ac/my_ac.h", "my_ac/my_ac.cpp"],
+    "dependencies": []
+  }
+}
